@@ -27,10 +27,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${roboto.variable} ${lora.variable} font-sans antialiased`}>
-        {children}
-      </body>
-    </html>
+    <>
+      <head>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="description" content="Smart Crop Guide is an AI-powered platform for Kenyan farmers, offering real-time crop advice, weather insights, and personalized tips to boost yields and save resources—even offline." />
+      </head>
+      <html lang="en">
+        <body className={`${roboto.variable} ${lora.variable} font-sans antialiased`}>
+          {children}
+        </body>
+      </html>
+    </>
   );
 }
